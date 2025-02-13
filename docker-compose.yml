@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  World-of-Games:
+    build:
+      context: .
+    container_name: World-of-Games
+    # Expose port 8777 to make the Flask app accessible
+    ports:
+      - "8777:8777"
+    # Ensure that the container runs in the background
+    restart: always
+
